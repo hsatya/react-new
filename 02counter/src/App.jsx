@@ -4,14 +4,10 @@ import { useState } from "react";
 function App() {
   const [counter, setCounter] = useState(15);
   const addValue = () => {
-    setCounter((prevCounter) => prevCounter + 1);
-    setCounter((prevCounter) => prevCounter + 1);
-    setCounter((prevCounter) => prevCounter + 1);
-    setCounter((prevCounter) => prevCounter + 1);
-    setCounter((prevCounter) => prevCounter + 1);
+    if (counter < 20) setCounter((prevCounter) => prevCounter + 1);
   };
   const removeValue = () => {
-    setCounter(counter - 1);
+    if (counter > 0) setCounter(counter - 1);
   };
   return (
     <>
